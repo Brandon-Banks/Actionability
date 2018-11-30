@@ -1,0 +1,128 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{    
+    background-color: #00e68e;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+body
+{
+    font-family: monospace;
+}
+
+.hero
+{
+    position: absolute;
+    width: 1200px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 120px;
+    text-align: center;
+    margin-top: 275px;
+}
+
+.button
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn
+{
+    border: 1px solid #585858;
+    padding: 10px 30px;
+    color: #585858;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.btn-one
+{
+    font-family: "Avenir", sans-serif;
+}
+
+.btn-one:hover
+{
+    color: white;
+    background-color: #585858;
+    border: 1px solid #585858;
+    transition: all 0.2s ease-in;
+}
+
+.btn-two
+{
+    font-family: "Avenir", sans-serif;
+}
+
+.btn-two:hover
+{
+    color: white;
+    background-color: #585858;
+    border: 1px solid #585858;
+    transition: all 0.2s ease-in;
+}
+
+.maincontainer
+{
+    position: relative;
+    width: 250px;
+    height: 320px;
+}
+
+.thecard
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover
+{
+    transform: rotateY(180deg)
+}
+
+.thefront
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    backface-visibility: hidden;
+    background: #585858;
+    color: white;
+    font-family: "Avenir", sans-serif;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.theback
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    backface-visibility: hidden;
+    background: white;
+    color: #585858;
+    transform: rotateY(180deg);
+    font-family: "Avenir", sans-serif;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

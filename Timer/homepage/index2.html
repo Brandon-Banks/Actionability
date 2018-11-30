@@ -1,0 +1,145 @@
+<html>
+    <head>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale = 1">
+      <title>CSS Card Flip</title>
+      <style>
+      body{
+      background: #00e68e;
+      }
+  
+  /* THE MAINCONTAINER HOLDS EVERYTHING */
+  .maincontainer{
+    position: absolute;
+    
+    width: 250px;
+    height: 320px;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+  .thecard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+  .thecard:hover{
+    transform: rotateY(180deg);
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+   .thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #585858;
+    color: white;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: white;
+    color: #585858;
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  
+  
+  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  .thefront h1, .theback h1{
+    font-family: "Avenir", sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .thefront p{
+    font-family: "Avenir", sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+  }
+
+.theback p{
+    font-family: "Avenir", sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+.button
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn
+{
+    border: 1px solid #00e68e;
+    padding: 10px 30px;
+    color: #585858;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.btn-one
+{
+    font-family: "Avenir", sans-serif;
+}
+
+.btn-one:hover
+{
+    color: white;
+    background-color: #00e68e;
+    border: 1px solid #00e68e;
+    transition: all 0.2s ease-in;
+}
+
+  /*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+      </style>
+    </head>
+  
+    <body>
+      <div class="maincontainer">
+  
+        <div class="thecard">
+  
+          <div class="thefront"><h1>  </h1><p>Homework</p></div>
+  
+          <div class="theback"><h1>Homework</h1><p>20:5 Minute Intervals</p>
+            <div class="button">
+                <a href="../timer/index.html" class="btn btn-one"> Start</a>
+            </div>
+  
+        </div>
+  
+    </body>
+  </html>﻿
